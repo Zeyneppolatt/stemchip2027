@@ -7,5 +7,146 @@
     "registration": "Registration",
     "paperRules": "Paper Guidelines",
     "contact": "Info / Contact"
+  },
+  "home": {
+    "eyebrow": "Example University · Example Faculty",
+    "title": "STEMCHIP 2027 Symposium",
+    "date": "June 15–18, 2027 • Istanbul, Turkey (sample date/location)",
+    "registerBtn": "Register",
+    "programBtn": "View Program",
+    "cardBoardsTitle": "Boards",
+    "cardBoardsDesc": "Browse the organizing and scientific committee members.",
+    "cardPapersTitle": "Paper Submission",
+    "cardPapersDesc": "Check the paper guidelines and submission deadlines.",
+    "cardRegistrationTitle": "Registration",
+    "cardRegistrationDesc": "See the registration details to join the symposium."
+  },
+  "boards": {
+    "title": "Boards",
+    "subtitle": "Honorary chair, organizing committee and scientific committee (sample names).",
+    "honoraryChair": "Honorary Chair",
+    "honoraryChairName": "Prof. Dr. Example Rector",
+    "organizingCommittee": "Organizing Committee",
+    "scientificCommittee": "Scientific Committee",
+    "organizingMembers": [
+      "Prof. Dr. Ahmet Yılmaz",
+      "Assoc. Prof. Dr. Ayşe Demir",
+      "Asst. Prof. Dr. Mehmet Kaya",
+      "Asst. Prof. Dr. Elif Şahin"
+    ],
+    "scientificMembers": [
+      "Prof. Dr. Zeynep Arslan",
+      "Prof. Dr. Can Öztürk",
+      "Assoc. Prof. Dr. Selin Aydın",
+      "Assoc. Prof. Dr. Burak Çelik",
+      "Asst. Prof. Dr. Deniz Yıldız",
+      "Asst. Prof. Dr. Ece Korkmaz"
+    ]
+  },
+  "program": {
+    "title": "Program",
+    "subtitle": "The program below is a draft and will be updated closer to the event.",
+    "days": [
+      {
+        "isim": "Day 1 — June 15",
+        "oturumlar": [
+          { "saat": "09:00 - 10:00", "baslik": "Registration and Welcome" },
+          { "saat": "10:00 - 11:00", "baslik": "Opening Speech", "konusmaci": "Prof. Dr. Example Rector" },
+          { "saat": "11:15 - 12:15", "baslik": "Keynote: Sample Title", "konusmaci": "Prof. Dr. Ahmet Yılmaz" },
+          { "saat": "13:30 - 15:00", "baslik": "Oral Presentation Session I" }
+        ]
+      },
+      {
+        "isim": "Day 2 — June 16",
+        "oturumlar": [
+          { "saat": "09:00 - 10:00", "baslik": "Keynote: Sample Title", "konusmaci": "Prof. Dr. Zeynep Arslan" },
+          { "saat": "10:15 - 12:00", "baslik": "Oral Presentation Session II" },
+          { "saat": "13:30 - 15:30", "baslik": "Poster Session" }
+        ]
+      },
+      {
+        "isim": "Day 3 — June 17",
+        "oturumlar": [
+          { "saat": "09:00 - 10:30", "baslik": "Oral Presentation Session III" },
+          { "saat": "11:00 - 12:00", "baslik": "Panel: Sample Topic" },
+          { "saat": "14:00 - 15:00", "baslik": "Closing and Awards Ceremony" }
+        ]
+      }
+    ]
+  },
+  "speakers": {
+    "title": "Invited Speakers",
+    "subtitle": "Invited speakers joining our symposium (sample information).",
+    "list": [
+      { "isim": "Prof. Dr. Ahmet Yılmaz", "kurum": "Example University", "konu": "Sample Talk Title I" },
+      { "isim": "Prof. Dr. Zeynep Arslan", "kurum": "Example University", "konu": "Sample Talk Title II" },
+      { "isim": "Prof. Dr. John Smith", "kurum": "Example Foreign University", "konu": "Sample Talk Title III" },
+      { "isim": "Assoc. Prof. Dr. Can Öztürk", "kurum": "Example University", "konu": "Sample Talk Title IV" }
+    ]
+  },
+  "registration": {
+    "title": "Registration",
+    "subtitle": "Registration fees and form (sample prices, final amounts will be announced soon).",
+    "feesTitle": "Registration Fees",
+    "earlyBird": "Early Bird",
+    "lateBird": "Late Registration",
+    "fees": [
+      { "kategori": "Student", "erken": "750 TRY", "gec": "1000 TRY" },
+      { "kategori": "Academic / Researcher", "erken": "1250 TRY", "gec": "1500 TRY" },
+      { "kategori": "Listener", "erken": "500 TRY", "gec": "750 TRY" }
+    ],
+    "formTitle": "Registration Form",
+    "fullName": "Full Name",
+    "email": "Email",
+    "institution": "Institution",
+    "category": "Category",
+    "categoryStudent": "Student",
+    "categoryAcademic": "Academic / Researcher",
+    "categoryListener": "Listener",
+    "submit": "Register",
+    "submitAlert": "The registration form backend will be added soon. This button is a placeholder for now."
+  },
+  "paperRules": {
+    "title": "Paper Guidelines",
+    "subtitle": "Important dates and rules for paper submission (sample information).",
+    "datesTitle": "Important Dates",
+    "dates": [
+      { "etiket": "Abstract Submission Deadline", "tarih": "March 1, 2027" },
+      { "etiket": "Acceptance Notification", "tarih": "April 1, 2027" },
+      { "etiket": "Full Paper Submission Deadline", "tarih": "May 1, 2027" },
+      { "etiket": "Early Registration Deadline", "tarih": "May 15, 2027" }
+    ],
+    "rulesTitle": "Writing Rules",
+    "rules": [
+      "Papers may be submitted in Turkish or English.",
+      "Abstracts must be at most 300 words.",
+      "Full papers must be prepared using the template and must not exceed 8 pages.",
+      "Author(s) and institution details must be clearly stated on the title page.",
+      "Papers must be uploaded as PDF through the system.",
+      "Each author may appear on at most 2 papers."
+    ],
+    "templateTitle": "Paper Template",
+    "templateDesc": "Please use the template below when preparing your paper.",
+    "templateBtn": "Download Template (.docx)"
+  },
+  "contact": {
+    "title": "Info / Contact",
+    "subtitle": "General information about the symposium and contact channels.",
+    "aboutTitle": "About the Symposium",
+    "aboutText": "STEMCHIP 2027 is a symposium that brings together researchers, academics and students in the related scientific fields. The full scope of the event, topics and organizing institution details will be published here soon. (sample text)",
+    "contactInfoTitle": "Contact Information",
+    "emailLabel": "Email",
+    "emailValue": "bilgi\\@stemchip2027.com.tr",
+    "phoneLabel": "Phone",
+    "phoneValue": "+90 (212) 000 00 00 (sample)",
+    "addressLabel": "Address",
+    "addressValue": "Example University, Example Faculty, Istanbul (sample address)"
+  },
+  "footer": {
+    "tagline": "The symposium date and location will be announced soon.",
+    "quickLinks": "Quick Links",
+    "contactTitle": "Contact",
+    "emailLabel": "Email",
+    "copyright": "STEMCHIP 2027. All rights reserved."
   }
 }

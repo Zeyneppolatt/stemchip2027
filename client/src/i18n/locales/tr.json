@@ -7,5 +7,146 @@
     "registration": "Kayıt",
     "paperRules": "Bildiri Kuralları",
     "contact": "Bilgiler / İletişim"
+  },
+  "home": {
+    "eyebrow": "Örnek Üniversite · Örnek Fakülte",
+    "title": "STEMCHIP 2027 Sempozyumu",
+    "date": "15–18 Haziran 2027 • İstanbul, Türkiye (örnek tarih/yer)",
+    "registerBtn": "Kayıt Ol",
+    "programBtn": "Programı Gör",
+    "cardBoardsTitle": "Kurullar",
+    "cardBoardsDesc": "Düzenleme ve bilim kurulu üyelerini inceleyin.",
+    "cardPapersTitle": "Bildiri Gönderimi",
+    "cardPapersDesc": "Bildiri kurallarını ve son gönderim tarihlerini görün.",
+    "cardRegistrationTitle": "Kayıt",
+    "cardRegistrationDesc": "Sempozyuma katılmak için kayıt bilgilerine göz atın."
+  },
+  "boards": {
+    "title": "Kurullar",
+    "subtitle": "Onursal başkan, düzenleme kurulu ve bilim kurulu bilgileri (örnek isimlerdir).",
+    "honoraryChair": "Onursal Başkan",
+    "honoraryChairName": "Prof. Dr. Örnek Rektör",
+    "organizingCommittee": "Düzenleme Kurulu",
+    "scientificCommittee": "Bilim Kurulu",
+    "organizingMembers": [
+      "Prof. Dr. Ahmet Yılmaz",
+      "Doç. Dr. Ayşe Demir",
+      "Dr. Öğr. Üyesi Mehmet Kaya",
+      "Dr. Öğr. Üyesi Elif Şahin"
+    ],
+    "scientificMembers": [
+      "Prof. Dr. Zeynep Arslan",
+      "Prof. Dr. Can Öztürk",
+      "Doç. Dr. Selin Aydın",
+      "Doç. Dr. Burak Çelik",
+      "Dr. Öğr. Üyesi Deniz Yıldız",
+      "Dr. Öğr. Üyesi Ece Korkmaz"
+    ]
+  },
+  "program": {
+    "title": "Program",
+    "subtitle": "Aşağıdaki program taslaktır, kesin program yaklaşan tarihlerde güncellenecektir.",
+    "days": [
+      {
+        "isim": "1. Gün — 15 Haziran",
+        "oturumlar": [
+          { "saat": "09:00 - 10:00", "baslik": "Kayıt ve Karşılama" },
+          { "saat": "10:00 - 11:00", "baslik": "Açılış Konuşması", "konusmaci": "Prof. Dr. Örnek Rektör" },
+          { "saat": "11:15 - 12:15", "baslik": "Davetli Konuşma: Örnek Başlık", "konusmaci": "Prof. Dr. Ahmet Yılmaz" },
+          { "saat": "13:30 - 15:00", "baslik": "Sözlü Bildiri Oturumu I" }
+        ]
+      },
+      {
+        "isim": "2. Gün — 16 Haziran",
+        "oturumlar": [
+          { "saat": "09:00 - 10:00", "baslik": "Davetli Konuşma: Örnek Başlık", "konusmaci": "Prof. Dr. Zeynep Arslan" },
+          { "saat": "10:15 - 12:00", "baslik": "Sözlü Bildiri Oturumu II" },
+          { "saat": "13:30 - 15:30", "baslik": "Poster Oturumu" }
+        ]
+      },
+      {
+        "isim": "3. Gün — 17 Haziran",
+        "oturumlar": [
+          { "saat": "09:00 - 10:30", "baslik": "Sözlü Bildiri Oturumu III" },
+          { "saat": "11:00 - 12:00", "baslik": "Panel: Örnek Konu" },
+          { "saat": "14:00 - 15:00", "baslik": "Kapanış ve Ödül Töreni" }
+        ]
+      }
+    ]
+  },
+  "speakers": {
+    "title": "Davetli Konuşmacılar",
+    "subtitle": "Sempozyumumuza katılacak davetli konuşmacılar (örnek bilgilerdir).",
+    "list": [
+      { "isim": "Prof. Dr. Ahmet Yılmaz", "kurum": "Örnek Üniversite", "konu": "Örnek Konuşma Başlığı I" },
+      { "isim": "Prof. Dr. Zeynep Arslan", "kurum": "Örnek Üniversite", "konu": "Örnek Konuşma Başlığı II" },
+      { "isim": "Prof. Dr. John Smith", "kurum": "Örnek Yabancı Üniversite", "konu": "Örnek Konuşma Başlığı III" },
+      { "isim": "Doç. Dr. Can Öztürk", "kurum": "Örnek Üniversite", "konu": "Örnek Konuşma Başlığı IV" }
+    ]
+  },
+  "registration": {
+    "title": "Kayıt",
+    "subtitle": "Kayıt ücretleri ve kayıt formu (örnek fiyatlar, kesin tutarlar yakında açıklanacaktır).",
+    "feesTitle": "Kayıt Ücretleri",
+    "earlyBird": "Erken Kayıt",
+    "lateBird": "Geç Kayıt",
+    "fees": [
+      { "kategori": "Öğrenci", "erken": "750 TL", "gec": "1000 TL" },
+      { "kategori": "Akademisyen / Araştırmacı", "erken": "1250 TL", "gec": "1500 TL" },
+      { "kategori": "Dinleyici", "erken": "500 TL", "gec": "750 TL" }
+    ],
+    "formTitle": "Kayıt Formu",
+    "fullName": "Ad Soyad",
+    "email": "E-posta",
+    "institution": "Kurum",
+    "category": "Kategori",
+    "categoryStudent": "Öğrenci",
+    "categoryAcademic": "Akademisyen / Araştırmacı",
+    "categoryListener": "Dinleyici",
+    "submit": "Kayıt Ol",
+    "submitAlert": "Kayıt formu altyapısı yakında eklenecek. Şimdilik bu buton örnektir."
+  },
+  "paperRules": {
+    "title": "Bildiri Kuralları",
+    "subtitle": "Bildiri gönderimi ile ilgili tarihler ve kurallar (örnek bilgilerdir).",
+    "datesTitle": "Önemli Tarihler",
+    "dates": [
+      { "etiket": "Bildiri Özeti Son Gönderim Tarihi", "tarih": "1 Mart 2027" },
+      { "etiket": "Kabul Bildirimi", "tarih": "1 Nisan 2027" },
+      { "etiket": "Tam Metin Son Gönderim Tarihi", "tarih": "1 Mayıs 2027" },
+      { "etiket": "Erken Kayıt Son Tarihi", "tarih": "15 Mayıs 2027" }
+    ],
+    "rulesTitle": "Yazım Kuralları",
+    "rules": [
+      "Bildiriler Türkçe veya İngilizce olarak gönderilebilir.",
+      "Özetler en fazla 300 kelime olmalıdır.",
+      "Tam metinler şablon üzerinden hazırlanmalı ve 8 sayfayı geçmemelidir.",
+      "Yazar(lar) ve kurum bilgileri başlık sayfasında açıkça belirtilmelidir.",
+      "Bildiriler, sistem üzerinden PDF formatında yüklenmelidir.",
+      "Her yazar en fazla 2 bildiride yer alabilir."
+    ],
+    "templateTitle": "Bildiri Şablonu",
+    "templateDesc": "Bildirinizi hazırlarken aşağıdaki şablonu kullanınız.",
+    "templateBtn": "Şablonu İndir (.docx)"
+  },
+  "contact": {
+    "title": "Bilgiler / İletişim",
+    "subtitle": "Sempozyum hakkında genel bilgiler ve iletişim kanalları.",
+    "aboutTitle": "Sempozyum Hakkında",
+    "aboutText": "STEMCHIP 2027, ilgili bilim alanlarındaki araştırmacıları, akademisyenleri ve öğrencileri bir araya getiren bir sempozyumdur. Etkinliğin tam kapsamı, konu başlıkları ve düzenleyen kurum bilgileri yakında bu alanda yayınlanacaktır. (örnek metindir)",
+    "contactInfoTitle": "İletişim Bilgileri",
+    "emailLabel": "E-posta",
+    "emailValue": "bilgi\\@stemchip2027.com.tr",
+    "phoneLabel": "Telefon",
+    "phoneValue": "0 (212) 000 00 00 (örnek)",
+    "addressLabel": "Adres",
+    "addressValue": "Örnek Üniversite, Örnek Fakülte, İstanbul (örnek adres)"
+  },
+  "footer": {
+    "tagline": "Sempozyum tarihi ve yeri yakında açıklanacaktır.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "contactTitle": "İletişim",
+    "emailLabel": "E-posta",
+    "copyright": "STEMCHIP 2027. Tüm hakları saklıdır."
   }
 }

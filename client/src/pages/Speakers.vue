@@ -1,26 +1,7 @@
 <script setup>
-const konusmacilar = [
-  {
-    isim: 'Prof. Dr. Ahmet Yılmaz',
-    kurum: 'Örnek Üniversite',
-    konu: 'Örnek Konuşma Başlığı I',
-  },
-  {
-    isim: 'Prof. Dr. Zeynep Arslan',
-    kurum: 'Örnek Üniversite',
-    konu: 'Örnek Konuşma Başlığı II',
-  },
-  {
-    isim: 'Prof. Dr. John Smith',
-    kurum: 'Örnek Yabancı Üniversite',
-    konu: 'Örnek Konuşma Başlığı III',
-  },
-  {
-    isim: 'Doç. Dr. Can Öztürk',
-    kurum: 'Örnek Üniversite',
-    konu: 'Örnek Konuşma Başlığı IV',
-  },
-]
+import { useI18n } from 'vue-i18n'
+
+const { t, tm } = useI18n()
 
 function basHarfler(isim) {
   return isim
@@ -34,14 +15,14 @@ function basHarfler(isim) {
 
 <template>
   <div class="max-w-6xl mx-auto px-6 py-16">
-    <h1 class="text-4xl font-extrabold text-purple-700 mb-4">Davetli Konuşmacılar</h1>
+    <h1 class="text-4xl font-extrabold text-purple-700 mb-4">{{ t('speakers.title') }}</h1>
     <p class="text-gray-500 mb-12">
-      Sempozyumumuza katılacak davetli konuşmacılar (örnek bilgilerdir).
+      {{ t('speakers.subtitle') }}
     </p>
 
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
       <div
-        v-for="kisi in konusmacilar"
+        v-for="kisi in tm('speakers.list')"
         :key="kisi.isim"
         class="bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-lg transition p-6 text-center"
       >
