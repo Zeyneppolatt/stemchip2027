@@ -25,10 +25,11 @@ function formGonder() {
     <p class="text-gray-500 mb-12">
       Kayıt ücretleri ve kayıt formu (örnek fiyatlar, kesin tutarlar yakında açıklanacaktır).
     </p>
-
-    <section class="mb-16 overflow-x-auto">
+  <section class="mb-16">
       <h2 class="text-2xl font-bold text-gray-800 mb-6">Kayıt Ücretleri</h2>
-      <table class="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
+
+      <!-- Masaüstü: tablo -->
+      <table class="hidden md:table w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
         <thead>
           <tr class="bg-purple-600 text-white text-left">
             <th class="px-6 py-3">Kategori</th>
@@ -48,6 +49,25 @@ function formGonder() {
           </tr>
         </tbody>
       </table>
+
+      <!-- Mobil: kartlar -->
+      <div class="md:hidden space-y-4">
+        <div
+          v-for="satir in ucretler"
+          :key="satir.kategori"
+          class="bg-white border border-gray-100 rounded-xl shadow-sm p-5"
+        >
+          <p class="font-semibold text-gray-800 mb-3">{{ satir.kategori }}</p>
+          <div class="flex justify-between text-sm mb-1">
+            <span class="text-gray-500">Erken Kayıt</span>
+            <span class="text-gray-700 font-medium">{{ satir.erken }}</span>
+          </div>
+          <div class="flex justify-between text-sm">
+            <span class="text-gray-500">Geç Kayıt</span>
+            <span class="text-gray-700 font-medium">{{ satir.gec }}</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section>
