@@ -1,0 +1,11 @@
+{
+  "menu": {
+    "home": "Home",
+    "boards": "Boards",
+    "program": "Program",
+    "speakers": "Invited Speakers",
+    "registration": "Registration",
+    "paperRules": "Paper Guidelines",
+    "contact": "Info / Contact"
+  }
+}

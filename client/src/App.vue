@@ -1,10 +1,14 @@
 <script setup>
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <template>
-  <div class="min-h-screen bg-gray-100 flex items-center justify-center">
-    <h1 class="text-4xl font-bold text-purple-600">
-      Tailwind çalışıyor! 🎉
-    </h1>
+  <div class="min-h-screen flex flex-col">
+    <Header />
+    <main class="flex-1">
+      <router-view />
+    </main>
+    <Footer />
   </div>
 </template>
