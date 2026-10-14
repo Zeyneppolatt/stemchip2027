@@ -108,23 +108,44 @@
   },
   "paperRules": {
     "title": "Paper Guidelines",
-    "subtitle": "Important dates and rules for paper submission (sample information).",
+    "subtitle": "Rules for oral and poster presentations, and important dates (sample information).",
+
+    "oralTitle": "Oral Presentation Rules",
+    "oralIntro": "Oral presentations at STEMCHIP 2027, to be held on June 15–18, 2027, will proceed as follows:",
+    "oralRules": [
+      "Slides (PowerPoint) may be prepared and presented in Turkish or English.",
+      "To avoid delays in the schedule, presentations must be handed to the session staff during the break before the session.",
+      "The presentation time is 10 minutes (an additional 2 minutes will be allocated for Q&A).",
+      "To use the time efficiently, presenters are advised to use 8-10 slides and focus on the original aspects of the work rather than general background."
+    ],
+
+    "posterTitle": "Poster Presentation Rules",
+    "posterIntro": "Poster presentation and preparation rules are as follows.",
+    "posterRules": [
+      "Posters must be mounted in the designated area before the announced date and time, and removed after the announced time (the organization is not responsible for posters that are not removed).",
+      "The poster size must be A1 (59.5 x 84.1 cm).",
+      "The presenting author's name must be underlined, and contact information must be included.",
+      "The original contribution of the work should be presented clearly and engagingly.",
+      "Poster authors are expected to be present at their posters during the announced poster session hours."
+    ],
+
     "datesTitle": "Important Dates",
-    "dates": [
-      { "etiket": "Abstract Submission Deadline", "tarih": "March 1, 2027" },
-      { "etiket": "Acceptance Notification", "tarih": "April 1, 2027" },
-      { "etiket": "Full Paper Submission Deadline", "tarih": "May 1, 2027" },
-      { "etiket": "Early Registration Deadline", "tarih": "May 15, 2027" }
+
+    "registrationDatesTitle": "Registration Dates",
+    "registrationDates": [
+      { "etiket": "Early Bird", "tarih": "January 15, 2027 – March 15, 2027" },
+      { "etiket": "Standard Registration", "tarih": "March 16, 2027 – May 15, 2027" },
+      { "etiket": "Late Registration", "tarih": "May 16, 2027 – June 14, 2027" },
+      { "etiket": "On-site Registration", "tarih": "June 15–18, 2027" }
     ],
-    "rulesTitle": "Writing Rules",
-    "rules": [
-      "Papers may be submitted in Turkish or English.",
-      "Abstracts must be at most 300 words.",
-      "Full papers must be prepared using the template and must not exceed 8 pages.",
-      "Author(s) and institution details must be clearly stated on the title page.",
-      "Papers must be uploaded as PDF through the system.",
-      "Each author may appear on at most 2 papers."
+
+    "abstractDatesTitle": "Abstracts",
+    "abstractDates": [
+      { "etiket": "Abstract Submission / Review", "tarih": "January 15, 2027 – May 1, 2027" },
+      { "etiket": "Acceptance Notification", "tarih": "May 15, 2027" }
     ],
+    "abstractNote": "Abstracts submitted earlier will be reviewed with priority.",
+
     "templateTitle": "Paper Template",
     "templateDesc": "Please use the template below when preparing your paper.",
     "templateBtn": "Download Template (.docx)"
@@ -140,7 +161,47 @@
     "phoneLabel": "Phone",
     "phoneValue": "+90 (212) 000 00 00 (sample)",
     "addressLabel": "Address",
-    "addressValue": "Example University, Example Faculty, Istanbul (sample address)"
+    "addressValue": "Example University, Example Faculty, Istanbul (sample address)",
+    "pastEventsTitle": "Past Events",
+    "pastEventsNote": "(sample information, final details will be added soon)",
+    "pastEventsNo": "No.",
+    "pastEventsEvent": "Event",
+    "pastEventsType": "Type",
+    "pastEventsDate": "Date",
+    "pastEventsCity": "Location",
+    "pastEventsInstitution": "Organizer",
+    "pastEventsChair": "Symposium Chair",
+    "pastEvents": [
+      { "no": "29", "etkinlik": "STEMCHIP Symposium No. 29", "tur": "National", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "28", "etkinlik": "STEMCHIP Symposium No. 28", "tur": "National", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "27", "etkinlik": "STEMCHIP Symposium No. 27", "tur": "International", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "26", "etkinlik": "STEMCHIP Symposium No. 26", "tur": "National", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "25", "etkinlik": "STEMCHIP Symposium No. 25", "tur": "National", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "24", "etkinlik": "STEMCHIP Symposium No. 24", "tur": "International", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "23", "etkinlik": "STEMCHIP Symposium No. 23", "tur": "National", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "22", "etkinlik": "STEMCHIP Symposium No. 22", "tur": "National", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "21", "etkinlik": "STEMCHIP Symposium No. 21", "tur": "International", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "20", "etkinlik": "STEMCHIP Symposium No. 20", "tur": "National", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "19", "etkinlik": "STEMCHIP Symposium No. 19", "tur": "National", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "18", "etkinlik": "STEMCHIP Symposium No. 18", "tur": "International", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "17", "etkinlik": "STEMCHIP Symposium No. 17", "tur": "National", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "16", "etkinlik": "STEMCHIP Symposium No. 16", "tur": "National", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "15", "etkinlik": "STEMCHIP Symposium No. 15", "tur": "International", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "14", "etkinlik": "STEMCHIP Symposium No. 14", "tur": "National", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "13", "etkinlik": "STEMCHIP Symposium No. 13", "tur": "National", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "12", "etkinlik": "STEMCHIP Symposium No. 12", "tur": "International", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "11", "etkinlik": "STEMCHIP Symposium No. 11", "tur": "National", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "10", "etkinlik": "STEMCHIP Symposium No. 10", "tur": "National", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "9", "etkinlik": "STEMCHIP Symposium No. 9", "tur": "International", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "8", "etkinlik": "STEMCHIP Symposium No. 8", "tur": "National", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "7", "etkinlik": "STEMCHIP Symposium No. 7", "tur": "National", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "6", "etkinlik": "STEMCHIP Symposium No. 6", "tur": "International", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "5", "etkinlik": "STEMCHIP Symposium No. 5", "tur": "National", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "4", "etkinlik": "STEMCHIP Symposium No. 4", "tur": "National", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "3", "etkinlik": "STEMCHIP Symposium No. 3", "tur": "International", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "2", "etkinlik": "STEMCHIP Symposium No. 2", "tur": "National", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" },
+      { "no": "1", "etkinlik": "STEMCHIP Symposium No. 1", "tur": "National", "tarih": "Sample Date", "sehir": "Sample City", "kurum": "Sample University", "baskan": "Sample Chair" }
+    ]
   },
   "footer": {
     "tagline": "The symposium date and location will be announced soon.",

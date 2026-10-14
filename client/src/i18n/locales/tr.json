@@ -9,9 +9,9 @@
     "contact": "Bilgiler / İletişim"
   },
   "home": {
-    "eyebrow": "Örnek Üniversite · Örnek Fakülte",
-    "title": "STEMCHIP 2027 Sempozyumu",
-    "date": "15–18 Haziran 2027 • İstanbul, Türkiye (örnek tarih/yer)",
+    "eyebrow": "ESOGÜ",
+    "title": "STEMCHIP 2027 KONGRESİ",
+    "date": "15–18 Haziran 2027 • ESKİŞEHİR, Türkiye",
     "registerBtn": "Kayıt Ol",
     "programBtn": "Programı Gör",
     "cardBoardsTitle": "Kurullar",
@@ -50,26 +50,59 @@
       {
         "isim": "1. Gün — 15 Haziran",
         "oturumlar": [
-          { "saat": "09:00 - 10:00", "baslik": "Kayıt ve Karşılama" },
-          { "saat": "10:00 - 11:00", "baslik": "Açılış Konuşması", "konusmaci": "Prof. Dr. Örnek Rektör" },
-          { "saat": "11:15 - 12:15", "baslik": "Davetli Konuşma: Örnek Başlık", "konusmaci": "Prof. Dr. Ahmet Yılmaz" },
-          { "saat": "13:30 - 15:00", "baslik": "Sözlü Bildiri Oturumu I" }
+          {
+            "saat": "09:00 - 10:00",
+            "baslik": "Kayıt ve Karşılama"
+          },
+          {
+            "saat": "10:00 - 11:00",
+            "baslik": "Açılış Konuşması",
+            "konusmaci": "Prof. Dr. Örnek Rektör"
+          },
+          {
+            "saat": "11:15 - 12:15",
+            "baslik": "Davetli Konuşma: Örnek Başlık",
+            "konusmaci": "Prof. Dr. Ahmet Yılmaz"
+          },
+          {
+            "saat": "13:30 - 15:00",
+            "baslik": "Sözlü Bildiri Oturumu I"
+          }
         ]
       },
       {
         "isim": "2. Gün — 16 Haziran",
         "oturumlar": [
-          { "saat": "09:00 - 10:00", "baslik": "Davetli Konuşma: Örnek Başlık", "konusmaci": "Prof. Dr. Zeynep Arslan" },
-          { "saat": "10:15 - 12:00", "baslik": "Sözlü Bildiri Oturumu II" },
-          { "saat": "13:30 - 15:30", "baslik": "Poster Oturumu" }
+          {
+            "saat": "09:00 - 10:00",
+            "baslik": "Davetli Konuşma: Örnek Başlık",
+            "konusmaci": "Prof. Dr. Zeynep Arslan"
+          },
+          {
+            "saat": "10:15 - 12:00",
+            "baslik": "Sözlü Bildiri Oturumu II"
+          },
+          {
+            "saat": "13:30 - 15:30",
+            "baslik": "Poster Oturumu"
+          }
         ]
       },
       {
         "isim": "3. Gün — 17 Haziran",
         "oturumlar": [
-          { "saat": "09:00 - 10:30", "baslik": "Sözlü Bildiri Oturumu III" },
-          { "saat": "11:00 - 12:00", "baslik": "Panel: Örnek Konu" },
-          { "saat": "14:00 - 15:00", "baslik": "Kapanış ve Ödül Töreni" }
+          {
+            "saat": "09:00 - 10:30",
+            "baslik": "Sözlü Bildiri Oturumu III"
+          },
+          {
+            "saat": "11:00 - 12:00",
+            "baslik": "Panel: Örnek Konu"
+          },
+          {
+            "saat": "14:00 - 15:00",
+            "baslik": "Kapanış ve Ödül Töreni"
+          }
         ]
       }
     ]
@@ -78,10 +111,26 @@
     "title": "Davetli Konuşmacılar",
     "subtitle": "Sempozyumumuza katılacak davetli konuşmacılar (örnek bilgilerdir).",
     "list": [
-      { "isim": "Prof. Dr. Ahmet Yılmaz", "kurum": "Örnek Üniversite", "konu": "Örnek Konuşma Başlığı I" },
-      { "isim": "Prof. Dr. Zeynep Arslan", "kurum": "Örnek Üniversite", "konu": "Örnek Konuşma Başlığı II" },
-      { "isim": "Prof. Dr. John Smith", "kurum": "Örnek Yabancı Üniversite", "konu": "Örnek Konuşma Başlığı III" },
-      { "isim": "Doç. Dr. Can Öztürk", "kurum": "Örnek Üniversite", "konu": "Örnek Konuşma Başlığı IV" }
+      {
+        "isim": "Prof. Dr. Ahmet Yılmaz",
+        "kurum": "Örnek Üniversite",
+        "konu": "Örnek Konuşma Başlığı I"
+      },
+      {
+        "isim": "Prof. Dr. Zeynep Arslan",
+        "kurum": "Örnek Üniversite",
+        "konu": "Örnek Konuşma Başlığı II"
+      },
+      {
+        "isim": "Prof. Dr. John Smith",
+        "kurum": "Örnek Yabancı Üniversite",
+        "konu": "Örnek Konuşma Başlığı III"
+      },
+      {
+        "isim": "Doç. Dr. Can Öztürk",
+        "kurum": "Örnek Üniversite",
+        "konu": "Örnek Konuşma Başlığı IV"
+      }
     ]
   },
   "registration": {
@@ -91,9 +140,21 @@
     "earlyBird": "Erken Kayıt",
     "lateBird": "Geç Kayıt",
     "fees": [
-      { "kategori": "Öğrenci", "erken": "750 TL", "gec": "1000 TL" },
-      { "kategori": "Akademisyen / Araştırmacı", "erken": "1250 TL", "gec": "1500 TL" },
-      { "kategori": "Dinleyici", "erken": "500 TL", "gec": "750 TL" }
+      {
+        "kategori": "Öğrenci",
+        "erken": "750 TL",
+        "gec": "1000 TL"
+      },
+      {
+        "kategori": "Akademisyen / Araştırmacı",
+        "erken": "1250 TL",
+        "gec": "1500 TL"
+      },
+      {
+        "kategori": "Dinleyici",
+        "erken": "500 TL",
+        "gec": "750 TL"
+      }
     ],
     "formTitle": "Kayıt Formu",
     "fullName": "Ad Soyad",
@@ -108,23 +169,56 @@
   },
   "paperRules": {
     "title": "Bildiri Kuralları",
-    "subtitle": "Bildiri gönderimi ile ilgili tarihler ve kurallar (örnek bilgilerdir).",
+    "subtitle": "Bildiri gönderimi, sözlü ve poster sunumlarıyla ilgili kurallar ve önemli tarihler (örnek bilgilerdir).",
+    "oralTitle": "Sözlü Sunum Kuralları",
+    "oralIntro": "15–18 Haziran 2027 tarihleri arasında düzenlenecek olan STEMCHIP 2027 Sözlü Sunumları aşağıdaki şekilde gerçekleştirilecektir:",
+    "oralRules": [
+      "Slaytlar (PowerPoint) Türkçe veya İngilizce hazırlanabilir ve sunumlar bu dillerde yapılabilir.",
+      "Program akışında gecikmeleri önlemek için sunumlar, oturum öncesi verilen ara sırasında ilgili görevliye teslim edilmelidir.",
+      "Sunum süresi 10 (on) dakikadır (soru ve cevap için ek 2 dakika ayrılacaktır).",
+      "Sürenin verimli olması için sunumlarda 8-10 adet slayt kullanılması ve genel bilgilerden daha çok çalışmanın özgün yönlerinin anlatılması beklenmektedir."
+    ],
+    "posterTitle": "Poster Sunumu Kuralları",
+    "posterIntro": "Poster sunum ve hazırlama kuralları aşağıdaki gibidir.",
+    "posterRules": [
+      "Posterler, organizasyon tarafından belirtilen alana, belirtilen tarih ve saatten önce asılmalı ve belirtilen saatten sonra sökülmelidir (sökülmeyen posterlerden organizasyon sorumlu değildir).",
+      "Poster boyutu A1 (59,5 x 84,1 cm) olmalıdır.",
+      "Posteri sunan kişinin adı ve soyadının altı çizilmeli ve iletişim bilgileri yer almalıdır.",
+      "Postere konu çalışmanın öne çıkan özgünlüğü açık, anlaşılır ve ilgi çekici şekilde sunulmalıdır.",
+      "Poster sahiplerinin, belirtilen poster sunum saatlerinde posterlerinin başında bulunmaları beklenmektedir."
+    ],
     "datesTitle": "Önemli Tarihler",
-    "dates": [
-      { "etiket": "Bildiri Özeti Son Gönderim Tarihi", "tarih": "1 Mart 2027" },
-      { "etiket": "Kabul Bildirimi", "tarih": "1 Nisan 2027" },
-      { "etiket": "Tam Metin Son Gönderim Tarihi", "tarih": "1 Mayıs 2027" },
-      { "etiket": "Erken Kayıt Son Tarihi", "tarih": "15 Mayıs 2027" }
+    "registrationDatesTitle": "Kayıt Tarihleri",
+    "registrationDates": [
+      {
+        "etiket": "Erken Kayıt",
+        "tarih": "15 Ocak 2027 – 15 Mart 2027"
+      },
+      {
+        "etiket": "Standart Kayıt",
+        "tarih": "16 Mart 2027 – 15 Mayıs 2027"
+      },
+      {
+        "etiket": "Geç Kayıt",
+        "tarih": "16 Mayıs 2027 – 14 Haziran 2027"
+      },
+      {
+        "etiket": "Kapıda Kayıt",
+        "tarih": "15–18 Haziran 2027"
+      }
     ],
-    "rulesTitle": "Yazım Kuralları",
-    "rules": [
-      "Bildiriler Türkçe veya İngilizce olarak gönderilebilir.",
-      "Özetler en fazla 300 kelime olmalıdır.",
-      "Tam metinler şablon üzerinden hazırlanmalı ve 8 sayfayı geçmemelidir.",
-      "Yazar(lar) ve kurum bilgileri başlık sayfasında açıkça belirtilmelidir.",
-      "Bildiriler, sistem üzerinden PDF formatında yüklenmelidir.",
-      "Her yazar en fazla 2 bildiride yer alabilir."
+    "abstractDatesTitle": "Özetler",
+    "abstractDates": [
+      {
+        "etiket": "Özet Gönderme / Değerlendirme",
+        "tarih": "15 Ocak 2027 – 1 Mayıs 2027"
+      },
+      {
+        "etiket": "Kabul Bildirimi",
+        "tarih": "15 Mayıs 2027"
+      }
     ],
+    "abstractNote": "Erken gönderilen bildiri özetleri öncelikli değerlendirilecektir.",
     "templateTitle": "Bildiri Şablonu",
     "templateDesc": "Bildirinizi hazırlarken aşağıdaki şablonu kullanınız.",
     "templateBtn": "Şablonu İndir (.docx)"
@@ -140,7 +234,279 @@
     "phoneLabel": "Telefon",
     "phoneValue": "0 (212) 000 00 00 (örnek)",
     "addressLabel": "Adres",
-    "addressValue": "Örnek Üniversite, Örnek Fakülte, İstanbul (örnek adres)"
+    "addressValue": "Örnek Üniversite, Örnek Fakülte, İstanbul (örnek adres)",
+    "pastEventsTitle": "Geçmiş Etkinlikler",
+    "pastEventsNote": "Not: 2006, 2016 ve 2020 yıllarında BIOMED düzenlenmemiştir.",
+    "pastEventsNo": "Sıra No",
+    "pastEventsEvent": "Etkinlik",
+    "pastEventsType": "Tür",
+    "pastEventsDate": "Tarih",
+    "pastEventsCity": "Yer",
+    "pastEventsInstitution": "Düzenleyen",
+    "pastEventsChair": "Sempozyum Başkanı",
+    "pastEvents": [
+      {
+        "no": 29,
+        "etkinlik": "BIOMED 2025",
+        "tur": "Ulusal",
+        "tarih": "21-23 Kasım 2025",
+        "sehir": "Ankara",
+        "kurum": "Ankara Ü. / ElçinLab",
+        "baskan": "Ayşe Eser ELÇİN"
+      },
+      {
+        "no": 28,
+        "etkinlik": "BIOMED 2024",
+        "tur": "Uluslararası",
+        "tarih": "1-3 Kasım 2024",
+        "sehir": "Kocaeli",
+        "kurum": "Kocaeli Ü.",
+        "baskan": "Nermin DEMİRKOL"
+      },
+      {
+        "no": 27,
+        "etkinlik": "BIOMED 2023",
+        "tur": "Ulusal",
+        "tarih": "20-22 Ekim 2023",
+        "sehir": "İzmir",
+        "kurum": "Ege Ü.",
+        "baskan": "Aylin ŞENDEMİR"
+      },
+      {
+        "no": 26,
+        "etkinlik": "BIOMED 2022",
+        "tur": "Uluslararası",
+        "tarih": "25-27 Kasım 2022",
+        "sehir": "Ankara (çevrimiçi)",
+        "kurum": "ElçinLab / Ankara Ü.",
+        "baskan": "Y. Murat ELÇİN"
+      },
+      {
+        "no": 25,
+        "etkinlik": "BIOMED 2021",
+        "tur": "Ulusal",
+        "tarih": "18-19 Aralık 2021",
+        "sehir": "Ankara (çevrimiçi)",
+        "kurum": "BDMD",
+        "baskan": "BDMD Yönetim Kurulu"
+      },
+      {
+        "no": 24,
+        "etkinlik": "BIOMED 2019",
+        "tur": "Uluslararası",
+        "tarih": "17-20 Ekim 2019",
+        "sehir": "Çeşme, İzmir",
+        "kurum": "Hacettepe Ü. Eczacılık F.",
+        "baskan": "Kezban ULUBAYRAM"
+      },
+      {
+        "no": 23,
+        "etkinlik": "BIOMED 2018",
+        "tur": "Ulusal",
+        "tarih": "15-16 Aralık 2018",
+        "sehir": "İstanbul",
+        "kurum": "Acıbadem Ü. / ODTÜ Biomaten",
+        "baskan": "Vasıf HASIRCI, Nesrin HASIRCI"
+      },
+      {
+        "no": 22,
+        "etkinlik": "BIOMED 2017",
+        "tur": "Uluslararası",
+        "tarih": "12-14 Mayıs 2017",
+        "sehir": "Ankara",
+        "kurum": "ElçinLab / Biovalda",
+        "baskan": "Y. Murat ELÇİN"
+      },
+      {
+        "no": 21,
+        "etkinlik": "BIOMED 2015",
+        "tur": "Uluslararası",
+        "tarih": "22-24 Ekim 2015",
+        "sehir": "Kemer, Antalya",
+        "kurum": "ODTÜ Biomaten",
+        "baskan": "Vasıf HASIRCI"
+      },
+      {
+        "no": 20,
+        "etkinlik": "BIOMED 2014",
+        "tur": "Uluslararası",
+        "tarih": "24-27 Ağustos 2014",
+        "sehir": "Köyceğiz, Muğla",
+        "kurum": "Biymedtek / Hacettepe Ü.",
+        "baskan": "Erhan PİŞKİN"
+      },
+      {
+        "no": 19,
+        "etkinlik": "BIOMED 2013",
+        "tur": "Uluslararası",
+        "tarih": "12-15 Kasım 2013",
+        "sehir": "Kuşadası, Aydın",
+        "kurum": "Ege Ü. Biyomühendislik B.",
+        "baskan": "İsmet DELİLOĞLU-GURHAN"
+      },
+      {
+        "no": 18,
+        "etkinlik": "BIOMED 2012",
+        "tur": "Ulusal",
+        "tarih": "10-13 Eylül 2012",
+        "sehir": "Tokat",
+        "kurum": "Gaziosmanpaşa Ü. / Hacettepe Ü.",
+        "baskan": "Erhan PİŞKİN (LO: Sinan EĞRİ)"
+      },
+      {
+        "no": 17,
+        "etkinlik": "BIOMED 2011",
+        "tur": "Uluslararası",
+        "tarih": "23-25 Kasım 2011",
+        "sehir": "Ankara",
+        "kurum": "ElçinLab / Ankara Ü.",
+        "baskan": "Y. Murat ELÇİN"
+      },
+      {
+        "no": 16,
+        "etkinlik": "BIOMED 2010",
+        "tur": "Uluslararası",
+        "tarih": "29 Eylül-2 Ekim 2010",
+        "sehir": "Sultanahmet, İstanbul",
+        "kurum": "Hacettepe Ü.",
+        "baskan": "Erhan PİŞKİN"
+      },
+      {
+        "no": 15,
+        "etkinlik": "BIOMED 2009",
+        "tur": "Uluslararası",
+        "tarih": "16-19 Ağustos 2009",
+        "sehir": "Güzelyurt, KKTC",
+        "kurum": "ODTÜ / ODTÜ KKK",
+        "baskan": "Vasıf HASIRCI (LO: E. ONURHAN)"
+      },
+      {
+        "no": 14,
+        "etkinlik": "BIOMED 2008",
+        "tur": "Uluslararası",
+        "tarih": "3-5 Mayıs 2008",
+        "sehir": "Ortaca, Muğla",
+        "kurum": "Muğla Ü. / Hacettepe Ü.",
+        "baskan": "Hakan AYHAN"
+      },
+      {
+        "no": 13,
+        "etkinlik": "BIOMED 2007",
+        "tur": "Uluslararası",
+        "tarih": "26-28 Ağustos 2007",
+        "sehir": "İstanbul",
+        "kurum": "Yeditepe Ü. / ODTÜ",
+        "baskan": "Vasıf HASIRCI (LO: G. T. KÖSE)"
+      },
+      {
+        "no": 12,
+        "etkinlik": "BIOMED 2005",
+        "tur": "Uluslararası",
+        "tarih": "20-23 Eylül 2005",
+        "sehir": "İzmir",
+        "kurum": "Ege Ü. Biyomüh. B.",
+        "baskan": "İsmet DELİLOĞLU-GURHAN"
+      },
+      {
+        "no": 11,
+        "etkinlik": "BIOMED 2004",
+        "tur": "Uluslararası",
+        "tarih": "6-10 Eylül 2004",
+        "sehir": "Ankara",
+        "kurum": "Hacettepe Ü.",
+        "baskan": "Erhan PİŞKİN"
+      },
+      {
+        "no": 10,
+        "etkinlik": "BIOMED 2003",
+        "tur": "Uluslararası",
+        "tarih": "10-12 Ekim 2003",
+        "sehir": "Güzelyurt, KKTC",
+        "kurum": "ODTÜ / ODTÜ KKK",
+        "baskan": "Nesrin HASIRCI (LO: E. ONURHAN)"
+      },
+      {
+        "no": 9,
+        "etkinlik": "BIOMED 2002",
+        "tur": "Uluslararası",
+        "tarih": "19-22 Eylül 2002",
+        "sehir": "Kemer, Antalya",
+        "kurum": "ElçinLab / Ankara Ü.",
+        "baskan": "Y. Murat ELÇİN"
+      },
+      {
+        "no": 8,
+        "etkinlik": "BIOMED 2001",
+        "tur": "Uluslararası",
+        "tarih": "5-8 Eylül 2001",
+        "sehir": "Ankara",
+        "kurum": "ODTÜ",
+        "baskan": "Vasıf HASIRCI"
+      },
+      {
+        "no": 7,
+        "etkinlik": "BIOMED 2000",
+        "tur": "Uluslararası",
+        "tarih": "25-27 Eylül 2000",
+        "sehir": "Ankara",
+        "kurum": "Hacettepe Ü.",
+        "baskan": "Erhan PİŞKİN"
+      },
+      {
+        "no": 6,
+        "etkinlik": "BIOMED 1999",
+        "tur": "Ulusal",
+        "tarih": "6-8 Ekim 1999",
+        "sehir": "Bornova, İzmir",
+        "kurum": "Ege Ü. Ecz. F. / Ebiltem",
+        "baskan": "M. Şengün ÖZSÖZ"
+      },
+      {
+        "no": 5,
+        "etkinlik": "BIOMED 1998",
+        "tur": "Ulusal",
+        "tarih": "16-18 Aralık 1998",
+        "sehir": "Ankara",
+        "kurum": "ODTÜ",
+        "baskan": "Nesrin HASIRCI"
+      },
+      {
+        "no": 4,
+        "etkinlik": "BIOMED 1997",
+        "tur": "Uluslararası",
+        "tarih": "15-17 Eylül 1997",
+        "sehir": "İstanbul",
+        "kurum": "Hacettepe Ü. Eczacılık F.",
+        "baskan": "Atilla HİNCAL, Süheyla KAŞ"
+      },
+      {
+        "no": 3,
+        "etkinlik": "BIOMED 1996",
+        "tur": "Ulusal",
+        "tarih": "11-14 Aralık 1996",
+        "sehir": "Uludağ, Bursa",
+        "kurum": "Uludağ Ü. / Hacettepe Ü.",
+        "baskan": "Erhan PİŞKİN (LO: Y. ULCAY)"
+      },
+      {
+        "no": 2,
+        "etkinlik": "BIOMED 1995",
+        "tur": "Ulusal",
+        "tarih": "21-23 Eylül 1995",
+        "sehir": "Ankara",
+        "kurum": "ODTÜ",
+        "baskan": "Vasıf HASIRCI"
+      },
+      {
+        "no": 1,
+        "etkinlik": "BIOMED 1994",
+        "tur": "Ulusal",
+        "tarih": "19-21 Eylül 1994",
+        "sehir": "Ankara",
+        "kurum": "Hacettepe Ü.",
+        "baskan": "Erhan PİŞKİN"
+      }
+    ]
   },
   "footer": {
     "tagline": "Sempozyum tarihi ve yeri yakında açıklanacaktır.",

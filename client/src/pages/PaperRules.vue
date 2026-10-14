@@ -12,24 +12,13 @@ const { t, tm } = useI18n()
     </p>
 
     <section class="mb-16">
-      <h2 class="text-2xl font-bold text-gray-800 mb-6">{{ t('paperRules.datesTitle') }}</h2>
-      <div class="grid gap-4 sm:grid-cols-2">
-        <div
-          v-for="tarihItem in tm('paperRules.dates')"
-          :key="tarihItem.etiket"
-          class="bg-white border border-gray-100 rounded-xl shadow-sm p-5"
-        >
-          <p class="text-purple-600 font-bold text-lg">{{ tarihItem.tarih }}</p>
-          <p class="text-gray-600 text-sm mt-1">{{ tarihItem.etiket }}</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="mb-16">
-      <h2 class="text-2xl font-bold text-gray-800 mb-6">{{ t('paperRules.rulesTitle') }}</h2>
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">{{ t('paperRules.oralTitle') }}</h2>
+      <p class="text-gray-600 mb-6 max-w-3xl">
+        {{ t('paperRules.oralIntro') }}
+      </p>
       <ul class="space-y-3">
         <li
-          v-for="(kural, index) in tm('paperRules.rules')"
+          v-for="(kural, index) in tm('paperRules.oralRules')"
           :key="index"
           class="flex items-start gap-3 text-gray-600"
         >
@@ -37,6 +26,52 @@ const { t, tm } = useI18n()
           <span>{{ kural }}</span>
         </li>
       </ul>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">{{ t('paperRules.posterTitle') }}</h2>
+      <p class="text-gray-600 mb-6 max-w-3xl">
+        {{ t('paperRules.posterIntro') }}
+      </p>
+      <ul class="space-y-3">
+        <li
+          v-for="(kural, index) in tm('paperRules.posterRules')"
+          :key="index"
+          class="flex items-start gap-3 text-gray-600"
+        >
+          <span class="mt-1 w-2 h-2 rounded-full bg-purple-600 shrink-0"></span>
+          <span>{{ kural }}</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold text-gray-800 mb-6">{{ t('paperRules.datesTitle') }}</h2>
+
+      <h3 class="text-lg font-semibold text-gray-700 mb-4">{{ t('paperRules.registrationDatesTitle') }}</h3>
+      <div class="grid gap-4 sm:grid-cols-2 mb-10">
+        <div
+          v-for="tarihItem in tm('paperRules.registrationDates')"
+          :key="tarihItem.etiket"
+          class="bg-white border border-gray-100 rounded-xl shadow-sm p-5"
+        >
+          <p class="text-purple-600 font-bold text-lg">{{ tarihItem.tarih }}</p>
+          <p class="text-gray-600 text-sm mt-1">{{ tarihItem.etiket }}</p>
+        </div>
+      </div>
+
+      <h3 class="text-lg font-semibold text-gray-700 mb-4">{{ t('paperRules.abstractDatesTitle') }}</h3>
+      <div class="grid gap-4 sm:grid-cols-2 mb-3">
+        <div
+          v-for="tarihItem in tm('paperRules.abstractDates')"
+          :key="tarihItem.etiket"
+          class="bg-white border border-gray-100 rounded-xl shadow-sm p-5"
+        >
+          <p class="text-purple-600 font-bold text-lg">{{ tarihItem.tarih }}</p>
+          <p class="text-gray-600 text-sm mt-1">{{ tarihItem.etiket }}</p>
+        </div>
+      </div>
+      <p class="text-gray-500 text-sm italic">{{ t('paperRules.abstractNote') }}</p>
     </section>
 
     <section>
