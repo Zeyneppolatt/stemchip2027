@@ -20,6 +20,10 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  // Sayfa değişince en üste kaydır
+  scrollBehavior() {
+    return { top: 0 }
+  },
 })
 
 export default router

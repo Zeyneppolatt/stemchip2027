@@ -1,1 +1,67 @@
 @import "tailwindcss";
+
+/* Yazı tipi */
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Yazılar ekran genişliğine göre orantılı büyüsün
+   (telefonda 15px, geniş ekranda 18px'e kadar) */
+html {
+  font-size: clamp(15px, 0.55vw + 8px, 18px);
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-50 text-slate-700 antialiased;
+}
+
+/* Tüm sayfalarda ortak, geniş içerik alanı */
+@utility container-site {
+  width: 100%;
+  max-width: 1760px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (width >= 40rem) {
+    padding-inline: 2rem;
+  }
+  @media (width >= 64rem) {
+    padding-inline: 3.5rem;
+  }
+}
+
+/* Arka plandaki ince ızgara deseni */
+@utility bg-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Bölüm başlığının üstündeki küçük etiket */
+@utility eyebrow {
+  @apply inline-flex items-center gap-2 rounded-full bg-purple-100 px-3 py-1 text-xs font-bold uppercase tracking-widest text-purple-700;
+}
+
+/* Beyaz kart */
+@utility card {
+  @apply rounded-3xl border border-slate-200/70 bg-white shadow-[0_1px_2px_rgba(15,23,42,0.04),0_8px_24px_-12px_rgba(76,29,149,0.15)];
+}
+
+/* Ana sayfa arka plan görselinin yavaşça "nefes alması" */
+@keyframes hero-breathe {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.04); }
+}
+.hero-bg {
+  transform: translate(-50%, -50%);
+  animation: hero-breathe 14s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg { animation: none; }
+}
+
+/* Bölüm noktalarıyla kaydırınca başlık menünün altında kalmasın */
+[data-section] {
+  scroll-margin-top: 6rem;
+}

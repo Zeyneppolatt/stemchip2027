@@ -19,7 +19,33 @@
     "cardPapersTitle": "Bildiri Gönderimi",
     "cardPapersDesc": "Bildiri kurallarını ve son gönderim tarihlerini görün.",
     "cardRegistrationTitle": "Kayıt",
-    "cardRegistrationDesc": "Sempozyuma katılmak için kayıt bilgilerine göz atın."
+    "cardRegistrationDesc": "Sempozyuma katılmak için kayıt bilgilerine göz atın.",
+    "dateShort": "15–18 Haziran 2027",
+    "location": "Eskişehir, Türkiye",
+    "countdownTitle": "Kongreye kalan süre",
+    "days": "Gün",
+    "hours": "Saat",
+    "minutes": "Dakika",
+    "seconds": "Saniye",
+    "quickTitle": "Hızlı Erişim",
+    "quickSubtitle": "Kongreyle ilgili aradığınız her şey tek tıkla.",
+    "datesTitle": "Önemli Tarihler",
+    "datesLink": "Tüm tarihler",
+    "ctaTitle": "Çalışmanızı STEMCHIP 2027'de paylaşın",
+    "ctaText": "Bildiri özetlerinizi 1 Mayıs 2027 tarihine kadar gönderebilirsiniz. Erken gönderilen özetler öncelikli değerlendirilir.",
+    "ctaBtn": "Bildiri Kurallarını İncele",
+    "scroll": "Aşağı kaydır",
+    "more": "Daha Fazla",
+    "sectionHero": "Giriş",
+    "sectionCta": "Bildiri Çağrısı",
+    "cardProgramTitle": "Program",
+    "cardProgramDesc": "Oturumlar, saatler ve gün gün kongre akışı.",
+    "cardSpeakersTitle": "Davetli Konuşmacılar",
+    "cardSpeakersDesc": "Alanında öne çıkan davetli konuşmacılarımızla tanışın.",
+    "cardContactTitle": "Bilgiler / İletişim",
+    "cardContactDesc": "Sempozyum hakkında bilgiler ve iletişim kanalları.",
+    "prev": "Önceki",
+    "next": "Sonraki"
   },
   "boards": {
     "title": "Kurullar",
@@ -105,7 +131,9 @@
           }
         ]
       }
-    ]
+    ],
+    "sessions": "oturum",
+    "schedule": "Günlük Akış"
   },
   "speakers": {
     "title": "Davetli Konuşmacılar",
@@ -165,7 +193,10 @@
     "categoryAcademic": "Akademisyen / Araştırmacı",
     "categoryListener": "Dinleyici",
     "submit": "Kayıt Ol",
-    "submitAlert": "Kayıt formu altyapısı yakında eklenecek. Şimdilik bu buton örnektir."
+    "submitAlert": "Kayıt formu altyapısı yakında eklenecek. Şimdilik bu buton örnektir.",
+    "feesNote": "Tüm ücretlere KDV dahildir (örnek).",
+    "popular": "En çok tercih edilen",
+    "formSubtitle": "Formu doldurun, kayıt bilgileriniz e-posta adresinize gönderilsin."
   },
   "paperRules": {
     "title": "Bildiri Kuralları",
@@ -506,7 +537,8 @@
         "kurum": "Hacettepe Ü.",
         "baskan": "Erhan PİŞKİN"
       }
-    ]
+    ],
+    "sendMail": "E-posta gönder"
   },
   "footer": {
     "tagline": "Sempozyum tarihi ve yeri yakında açıklanacaktır.",
@@ -514,5 +546,14 @@
     "contactTitle": "İletişim",
     "emailLabel": "E-posta",
     "copyright": "STEMCHIP 2027. Tüm hakları saklıdır."
+  },
+  "search": {
+    "placeholder": "Ara...",
+    "noResults": "Sonuç bulunamadı",
+    "hint": "Sayfa, isim veya konu yazın"
+  },
+  "sound": {
+    "on": "Sesi aç",
+    "off": "Sesi kapat"
   }
 }
