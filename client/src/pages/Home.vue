@@ -63,7 +63,7 @@ const tarihler = computed(() => [
 <template>
   <div>
     <!-- ============ HERO ============ -->
-    <section :data-section="t('home.sectionHero')" class="relative flex min-h-[100svh] items-center overflow-hidden bg-gradient-to-br from-indigo-950 via-purple-800 to-fuchsia-700 text-white">
+    <section :data-section="t('home.sectionHero')" class="fp-hero relative flex min-h-[100svh] items-center overflow-hidden bg-gradient-to-br from-indigo-950 via-purple-800 to-fuchsia-700 text-white">
       <!-- Arka plan görseli (şimdilik ESOGÜ logosu).
            Kendi logonuzu/fotoğrafınızı koymak için public klasöründeki dosyayı değiştirin. -->
       <img

@@ -1,5 +1,8 @@
 <script setup>
 import Icon from './Icon.vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 // Her sayfanın üstündeki renkli başlık alanı
 defineProps({
@@ -10,7 +13,7 @@ defineProps({
 </script>
 
 <template>
-  <section :data-section="title" class="relative overflow-hidden bg-gradient-to-br from-indigo-950 via-purple-800 to-fuchsia-700 text-white">
+  <section :data-section="title" class="fp-hero relative overflow-hidden bg-gradient-to-br from-indigo-950 via-purple-800 to-fuchsia-700 text-white">
     <div class="bg-grid pointer-events-none absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]"></div>
     <div class="pointer-events-none absolute -left-32 -top-32 h-[28rem] w-[28rem] rounded-full bg-fuchsia-500/40 blur-3xl"></div>
     <div class="pointer-events-none absolute -right-20 top-0 h-96 w-96 rounded-full bg-cyan-400/25 blur-3xl"></div>
@@ -24,10 +27,16 @@ defineProps({
           <Icon :name="icon" class="h-8 w-8 md:h-10 md:w-10" />
         </span>
         <div>
-          <h1 class="text-4xl font-extrabold tracking-tight md:text-5xl xl:text-6xl">{{ title }}</h1>
+          <h1 class="text-4xl font-extrabold tracking-tight md:text-6xl xl:text-7xl">{{ title }}</h1>
           <p v-if="subtitle" class="mt-3 max-w-3xl text-base text-white/75 md:text-lg">{{ subtitle }}</p>
         </div>
       </div>
+    </div>
+
+    <!-- Aşağı kaydır işareti (tam ekran görünümde) -->
+    <div class="absolute bottom-20 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-xs font-semibold uppercase tracking-widest text-white/60 [html.fp_&]:flex">
+      {{ t('home.scroll') }}
+      <Icon name="arrowDown" class="h-5 w-5 animate-bounce" />
     </div>
 
     <!-- Alt kenardaki yumuşak dalga -->

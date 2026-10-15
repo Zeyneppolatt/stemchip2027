@@ -4,21 +4,36 @@ import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { sesAcik, tiniCal } from '../sound.js'
 
-// Sağ kenardaki dikey bölüm noktaları.
-// Sayfadaki data-section="..." etiketli bölümleri bulur.
+// =========================================================
+// TAM EKRAN BÖLÜM GEÇİŞİ (TUSAŞ sitesindeki gibi)
+// - Sayfadaki her data-section="..." bir "sayfa"dır (en az ekran boyu).
+// - Fare tekerleği / klavye ile her harekette bir sonraki bölüme
+//   yumuşakça kayar. Ekrandan uzun bölümlerde önce bölümün içinde ilerler.
+// - Sağdaki noktalar hangi bölümde olduğunu gösterir.
+// - Telefonda ve "hareketi azalt" ayarında normal kaydırma kullanılır.
+// =========================================================
+
 const route = useRoute()
 const { t, locale } = useI18n()
 
 const bolumler = ref([]) // { el, ad }
 const aktif = ref(0)
 let gozlemci = null
-let tiklamaIleKaydiriliyor = false
 
+const GECIS_SURESI = 900 // ms
+let animasyonda = false
+let kilitBitis = 0
+
+const tamEkranAcik = () =>
+  window.matchMedia('(min-width: 768px)').matches &&
+  !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+// ---------- Bölümleri bul ----------
 function bul() {
   gozlemci?.disconnect()
   const elemanlar = [...document.querySelectorAll('main [data-section]')]
   bolumler.value = elemanlar.map((el) => ({ el, ad: el.dataset.section }))
-  aktif.value = 0
+  aktifYap(enYakinBolum())
 
   gozlemci = new IntersectionObserver(
     (girdiler) => {
@@ -26,37 +41,201 @@ function bul() {
         if (!g.isIntersecting) continue
         const i = elemanlar.indexOf(g.target)
         if (i !== -1 && i !== aktif.value) {
-          aktif.value = i
-          if (!tiklamaIleKaydiriliyor) tiniCal()
+          aktifYap(i)
+          if (!animasyonda) tiniCal() // kaydırma çubuğuyla gezinirken de tını
         }
       }
     },
-    // Ekranın ortasındaki bölüm "aktif" sayılır
     { rootMargin: '-45% 0px -50% 0px' },
   )
   elemanlar.forEach((el) => gozlemci.observe(el))
 }
 
-function git(i) {
-  const b = bolumler.value[i]
-  if (!b) return
+// Aktif bölümü işaretle (içerik giriş animasyonu bu işarete bağlı)
+function aktifYap(i) {
   aktif.value = i
-  tiniCal()
-  tiklamaIleKaydiriliyor = true
-  b.el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  setTimeout(() => (tiklamaIleKaydiriliyor = false), 900)
+  bolumler.value.forEach((b, j) => {
+    if (j === i) b.el.setAttribute('data-aktif', '')
+    else b.el.removeAttribute('data-aktif')
+  })
 }
 
-// Sayfa değişince (geçiş animasyonu bitince) bölümleri yeniden bul
-watch(
-  () => route.path,
-  () => setTimeout(bul, 450),
-)
-// Dil değişince bölüm adlarını yenile
+function enYakinBolum() {
+  const orta = window.scrollY + window.innerHeight / 2
+  let sonuc = 0
+  bolumler.value.forEach((b, i) => {
+    if (ust(b.el) <= orta) sonuc = i
+  })
+  return sonuc
+}
+
+const ust = (el) => el.getBoundingClientRect().top + window.scrollY
+const alt = (el) => el.getBoundingClientRect().bottom + window.scrollY
+
+// ---------- Yumuşak kaydırma animasyonu ----------
+function yumusak(t) {
+  return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
+}
+
+function kaydir(hedef, sure = GECIS_SURESI) {
+  const baslangic = window.scrollY
+  const enFazla = document.documentElement.scrollHeight - window.innerHeight
+  hedef = Math.max(0, Math.min(hedef, enFazla))
+  const fark = hedef - baslangic
+  if (Math.abs(fark) < 2) return false
+
+  animasyonda = true
+  const t0 = performance.now()
+  const adim = (simdi) => {
+    const oran = Math.min(1, (simdi - t0) / sure)
+    window.scrollTo(0, baslangic + fark * yumusak(oran))
+    if (oran < 1) requestAnimationFrame(adim)
+    else {
+      animasyonda = false
+      kilitBitis = performance.now() + 350 // dokunmatik yüzeyin kalan kaymasını yut
+    }
+  }
+  requestAnimationFrame(adim)
+  return true
+}
+
+// ---------- Bir sonraki / önceki "sayfa" ----------
+function hedefBul(yon) {
+  const y = window.scrollY
+  const vh = window.innerHeight
+  const liste = bolumler.value
+  if (!liste.length) return null
+
+  // Şu an hangi bölümün içindeyiz?
+  let simdiki = -1
+  liste.forEach((b, i) => {
+    if (ust(b.el) <= y + 4) simdiki = i
+  })
+
+  const sonBolum = liste[liste.length - 1].el
+  const altbilgideyiz = y > alt(sonBolum) - vh + 4
+
+  if (yon > 0) {
+    if (simdiki === -1) return ust(liste[0].el)
+    const b = liste[simdiki].el
+    // Bölüm ekrandan uzunsa önce içinde ilerle
+    if (alt(b) > y + vh + 4) return Math.min(y + vh * 0.85, alt(b) - vh)
+    if (simdiki + 1 < liste.length) return ust(liste[simdiki + 1].el)
+    return document.documentElement.scrollHeight // son bölümden sonra: alt bilgi
+  } else {
+    if (altbilgideyiz) return Math.max(ust(sonBolum), alt(sonBolum) - vh)
+    if (simdiki === -1) return 0
+    const b = liste[simdiki].el
+    if (y > ust(b) + 4) return Math.max(ust(b), y - vh * 0.85)
+    if (simdiki > 0) {
+      const onceki = liste[simdiki - 1].el
+      return Math.max(ust(onceki), alt(onceki) - vh)
+    }
+    return 0
+  }
+}
+
+function git(yon) {
+  const hedef = hedefBul(yon)
+  if (hedef === null) return
+  const eskiBolum = aktif.value
+  if (kaydir(hedef)) {
+    // Bölüm değişecekse tını çal (bölüm içinde ilerlerken çalma)
+    const yeni = bolumIndexi(hedef)
+    if (yeni !== eskiBolum) {
+      aktifYap(yeni)
+      tiniCal()
+    }
+  }
+}
+
+function bolumIndexi(y) {
+  const orta = y + window.innerHeight / 2
+  let sonuc = 0
+  bolumler.value.forEach((b, i) => {
+    if (ust(b.el) <= orta) sonuc = i
+  })
+  return sonuc
+}
+
+// Noktaya tıklayınca
+function noktayaGit(i) {
+  const b = bolumler.value[i]
+  if (!b) return
+  if (i !== aktif.value) tiniCal()
+  aktifYap(i)
+  if (tamEkranAcik()) kaydir(ust(b.el))
+  else b.el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
+
+// ---------- Fare tekerleği ----------
+// Kendi içinde kaydırılabilen bir alanın (tablo, arama sonuçları vb.)
+// üzerindeysek ve o alan o yönde kayabiliyorsa, ona dokunma.
+function icKaydirmaVarMi(hedef, yon) {
+  let el = hedef
+  while (el && el !== document.body && el !== document.documentElement) {
+    const stil = getComputedStyle(el)
+    const kayar = /(auto|scroll)/.test(stil.overflowY) && el.scrollHeight > el.clientHeight + 1
+    if (kayar) {
+      if (yon > 0 && el.scrollTop + el.clientHeight < el.scrollHeight - 1) return true
+      if (yon < 0 && el.scrollTop > 0) return true
+    }
+    el = el.parentElement
+  }
+  return false
+}
+
+function tekerlek(e) {
+  if (!tamEkranAcik() || !bolumler.value.length || e.ctrlKey) return
+  if (Math.abs(e.deltaY) < Math.abs(e.deltaX)) return // yatay kaydırma (kart şeridi)
+  const yon = Math.sign(e.deltaY)
+  if (!yon || icKaydirmaVarMi(e.target, yon)) return
+
+  e.preventDefault()
+  if (animasyonda || performance.now() < kilitBitis) return
+  if (Math.abs(e.deltaY) < 4) return
+  git(yon)
+}
+
+// ---------- Klavye ----------
+function klavye(e) {
+  if (!tamEkranAcik() || !bolumler.value.length) return
+  const etiket = document.activeElement?.tagName
+  if (['INPUT', 'TEXTAREA', 'SELECT'].includes(etiket) || document.activeElement?.isContentEditable) return
+
+  let yon = 0
+  if (['ArrowDown', 'PageDown'].includes(e.key) || (e.key === ' ' && !e.shiftKey)) yon = 1
+  if (['ArrowUp', 'PageUp'].includes(e.key) || (e.key === ' ' && e.shiftKey)) yon = -1
+  if (e.key === 'Home') { e.preventDefault(); return noktayaGit(0) }
+  if (e.key === 'End') { e.preventDefault(); return kaydir(document.documentElement.scrollHeight) }
+  if (!yon) return
+
+  e.preventDefault()
+  if (animasyonda) return
+  git(yon)
+}
+
+// ---------- Yaşam döngüsü ----------
+function tamEkranSinifi() {
+  document.documentElement.classList.toggle('fp', tamEkranAcik())
+}
+
+watch(() => route.path, () => setTimeout(bul, 450))
 watch(locale, () => nextTick(() => setTimeout(bul, 50)))
 
-onMounted(() => setTimeout(bul, 300))
-onBeforeUnmount(() => gozlemci?.disconnect())
+onMounted(() => {
+  tamEkranSinifi()
+  window.addEventListener('resize', tamEkranSinifi)
+  window.addEventListener('wheel', tekerlek, { passive: false })
+  window.addEventListener('keydown', klavye)
+  setTimeout(bul, 300)
+})
+onBeforeUnmount(() => {
+  gozlemci?.disconnect()
+  window.removeEventListener('resize', tamEkranSinifi)
+  window.removeEventListener('wheel', tekerlek)
+  window.removeEventListener('keydown', klavye)
+})
 </script>
 
 <template>
@@ -72,7 +251,7 @@ onBeforeUnmount(() => gozlemci?.disconnect())
       class="group relative grid h-8 w-8 cursor-pointer place-items-center"
       :aria-label="b.ad"
       :aria-current="i === aktif ? 'true' : undefined"
-      @click="git(i)"
+      @click="noktayaGit(i)"
     >
       <!-- Aktif bölümün halkası -->
       <span

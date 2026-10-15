@@ -9,7 +9,6 @@
    (telefonda 15px, geniş ekranda 18px'e kadar) */
 html {
   font-size: clamp(15px, 0.55vw + 8px, 18px);
-  scroll-behavior: smooth;
 }
 
 body {
@@ -61,7 +60,30 @@ body {
   .hero-bg { animation: none; }
 }
 
-/* Bölüm noktalarıyla kaydırınca başlık menünün altında kalmasın */
-[data-section] {
-  scroll-margin-top: 6rem;
+/* ============ TAM EKRAN BÖLÜMLER ============
+   html.fp sınıfı SectionDots.vue tarafından eklenir
+   (masaüstü + hareket azaltma kapalıyken). */
+html.fp main [data-section] {
+  min-height: 100svh;
+  align-content: center; /* içerik dikeyde ortada */
 }
+/* Giriş (hero) dışındaki bölümler: menünün altında kalmasın */
+html.fp main [data-section]:not(.fp-hero) {
+  padding-top: 6.5rem !important;
+  padding-bottom: 3rem !important;
+  margin-bottom: 0 !important;
+}
+
+/* Bölüm aktif olunca içerik aşağıdan yumuşakça gelir */
+html.fp main [data-section] > :not(.absolute):not(svg) {
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+html.fp main [data-section]:not([data-aktif]) > :not(.absolute):not(svg) {
+  opacity: 0;
+  transform: translateY(48px);
+}
+html.fp main [data-section][data-aktif] > :not(.absolute):not(svg):nth-child(2) { transition-delay: 0.05s; }
+html.fp main [data-section][data-aktif] > :not(.absolute):not(svg):nth-child(3) { transition-delay: 0.1s; }
+html.fp main [data-section][data-aktif] > :not(.absolute):not(svg):nth-child(n + 4) { transition-delay: 0.15s; }

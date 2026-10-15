@@ -51,7 +51,7 @@ const bilgiler = computed(() => [
         </div>
 
         <!-- Masaüstü: tablo -->
-        <div class="card hidden max-h-[40rem] overflow-auto md:block">
+        <div class="card hidden max-h-[40rem] [html.fp_&]:max-h-[calc(100svh-17rem)] overflow-auto md:block">
           <table class="w-full border-collapse text-left">
             <thead class="sticky top-0 z-10">
               <tr class="bg-gradient-to-r from-indigo-950 via-purple-800 to-fuchsia-700 text-sm text-white">

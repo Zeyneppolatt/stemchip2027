@@ -38,12 +38,21 @@ const renkler = [
     <PageHero :title="t('boards.title')" :subtitle="t('boards.subtitle')" icon="boards" />
 
     <div class="container-site py-16 md:py-24">
-      <!-- Onursal Başkan -->
-      <section :data-section="t('boards.honoraryChair')" class="mb-20">
-        <div class="relative overflow-hidden rounded-[2rem] bg-gradient-to-r from-purple-700 to-fuchsia-600 p-8 text-white shadow-xl shadow-purple-500/20 md:p-12">
+      <!-- Kurullar (Onursal Başkan, Düzenleme Kurulu ile aynı "sayfada") -->
+      <section
+        v-for="(kurul, k) in [
+          { baslik: t('boards.organizingCommittee'), liste: tm('boards.organizingMembers') },
+          { baslik: t('boards.scientificCommittee'), liste: tm('boards.scientificMembers') },
+        ]"
+        :key="kurul.baslik"
+        :data-section="kurul.baslik"
+        class="mb-20 last:mb-0"
+      >
+        <!-- Onursal Başkan -->
+        <div v-if="k === 0" class="relative mb-14 overflow-hidden rounded-[2rem] bg-gradient-to-r from-purple-700 to-fuchsia-600 p-8 text-white shadow-xl shadow-purple-500/20 md:p-10">
           <div class="bg-grid pointer-events-none absolute inset-0 opacity-50"></div>
           <div class="relative flex flex-col items-start gap-6 sm:flex-row sm:items-center">
-            <span class="grid h-24 w-24 shrink-0 place-items-center rounded-full bg-white/15 text-3xl font-extrabold ring-4 ring-white/25">
+            <span class="grid h-20 w-20 shrink-0 place-items-center rounded-full bg-white/15 text-2xl font-extrabold ring-4 ring-white/25">
               {{ basHarfler(t('boards.honoraryChairName')) }}
             </span>
             <div>
@@ -54,18 +63,7 @@ const renkler = [
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- Kurullar -->
-      <section
-        v-for="kurul in [
-          { baslik: t('boards.organizingCommittee'), liste: tm('boards.organizingMembers') },
-          { baslik: t('boards.scientificCommittee'), liste: tm('boards.scientificMembers') },
-        ]"
-        :key="kurul.baslik"
-        :data-section="kurul.baslik"
-        class="mb-20 last:mb-0"
-      >
         <div class="mb-8 flex items-center gap-4">
           <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 md:text-4xl">{{ kurul.baslik }}</h2>
           <span class="rounded-full bg-purple-100 px-3 py-1 text-sm font-bold text-purple-700">{{ kurul.liste.length }}</span>
